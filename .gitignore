@@ -106,6 +106,7 @@ media
 
 # User-specific stuff:
 .idea/
+*.log
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
