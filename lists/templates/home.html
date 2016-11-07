@@ -4,9 +4,12 @@
 </head>
 <body>
     <h1>Start a new To-do list</h1>
-    <input id="id_new_item" placeholder="Enter to-do item here."/>
+    <form method="post">
+        {% csrf_token %}
+        <input id="id_new_item" name="item_text" placeholder="Enter to-do item here."/>
+    </form>
     <table id="id_list_table">
-        <tr><td>1: Buy peacock feathers</td></tr>
+        <tr><td>1: {{new_list_item}}</td></tr>
         <tr><td>2: Use peacock feathers to make a fly</td></tr>
     </table>
 </body>

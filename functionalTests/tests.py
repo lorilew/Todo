@@ -1,6 +1,7 @@
 import unittest
 from unittest import skip
 
+import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
@@ -8,6 +9,7 @@ class NewVisitorTest(unittest.TestCase):
 
     def setUp(self):
         self.browser = webdriver.Chrome()
+        self.browser.implicitly_wait(3)
 
     def tearDown(self):
         self.browser.quit()
